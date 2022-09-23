@@ -1,52 +1,47 @@
-let a = document.querySelector(".circle");
-
-let value = 0;
+let sec = 0;
 let timerId;
 let min = 0;
 let hr = 0;
 function tick() {
-    value++;
-    document.querySelector("#output").textContent = value;
+    sec++;
+    document.querySelector("#output").textContent = sec;
 
-    let b = document.querySelector(".percentage");
-    b.textContent = value;
-    let e = document.querySelector(".percentage1");
-    e.textContent = min;
-    let f = document.querySelector(".percentage2");
-    f.textContent = hr;
+    let divSec = document.querySelector(".percentage");
+    divSec.textContent = sec;
+    let divMin = document.querySelector(".percentage1");
+    divMin.textContent = min;
+    let divHr = document.querySelector(".percentage2");
+    divHr.textContent = hr;
 
 
-    let a = document.querySelector(".circle");
+    let secCircle = document.querySelector(".circle");
+    let minCircle = document.querySelector(".circle1");
+    let hrCircle = document.querySelector(".circle2");
 
-    let c = document.querySelector(".circle1");
-    
-    let d = document.querySelector(".circle2");
-
-    if (value < 5) {
-        value++;
-        a.style.strokeDasharray = `${value * 9.6}, 100`;
+    if (sec <= 59) {
+        secCircle.style.strokeDasharray = `${sec * 1.666}, 100`;
     } else {
-        value = 0;
+        sec = 0;
         min++;
         console.log(min)
-        c.style.strokeDasharray = `${min * 9.6}, 100`;
+        minCircle.style.strokeDasharray = `${min * 1.666}, 100`;
     }
-    if (min < 5) {
-        c.style.strokeDasharray = `${min * 9.6}, 100`;
-    } else if(min > 5){
+    if (min <= 59) {
+        minCircle.style.strokeDasharray = `${min * 1.666}, 100`;
+    } else if (min > 59) {
         min = 0;
         hr++;
-        d.style.strokeDasharray = `${hr * 9.6}, 100`;
+        hrCircle.style.strokeDasharray = `${hr * 1.666}, 100`;
     }
-    if (hr < 59) {
-        d.style.strokeDasharray = `${hr * 9.6}, 100`;
-    } 
+    if (hr <= 59) {
+        hrCircle.style.strokeDasharray = `${hr * 1.666}, 100`;
+    }
 }
-
-
 
 function resetValue() {
     value = 0;
+    min = 0;
+    hr = 0;
 }
 
 document.querySelector("#startBtn").addEventListener("click", function () {
