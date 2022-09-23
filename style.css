@@ -1,149 +1,112 @@
+	* {
+	    font-family: 'Abril Fatface', cursive;
+	}
 
-	.flex-wrapper2 {
-        display: flex;
-        flex-flow: row nowrap;
-    }
+	.flex-wrapper2,
+	.flex-wrapper1,
+	.flex-wrapper {
+	    width: 40%;
+	}
 
-    .single-chart2 {
-        width: 33%;
-        justify-content: space-around;
-    }
+	.circle-bg2,
+	.circle-bg1,
+	.circle-bg {
+	    fill: none;
+	    stroke: #eee;
+	    stroke-width: 3.8;
+	}
 
-    .circular-chart2 {
-        display: block;
-        margin: 10px auto;
-        max-width: 80%;
-        max-height: 250px;
-    }
+	@keyframes progress {
+	    0% {
+	        stroke-dasharray: 0 100;
+	    }
+	}
 
-    .circle-bg2 {
-        fill: none;
-        stroke: #eee;
-        stroke-width: 3.8;
-    }
+	.single-chart,
+	.single-chart1,
+	.single-chart2 {
+	    justify-content: space-around;
+	}
 
-    .circle2 {
-        fill: none;
-        stroke-width: 2.8;
-        stroke-linecap: round;
-        animation: progress 1s ease-out forwards;
-    }
+	.circular-chart {
+	    display: block;
+	    margin: 10px auto;
+	    max-width: 80%;
+	    max-height: 250px;
+	    background: linear-gradient(105deg, #5F83CC, #83B7FF);
+	    border-radius: 100%;
 
-    @keyframes progress {
-        0% {
-            stroke-dasharray: 0 100;
-        }
-    }
+	}
 
-    .circular-chart.orange2 .circle2 {
-        stroke: #0004ff;
-    }
+	.circle,
+	.circle1,
+	.circle2 {
+	    fill: none;
+	    stroke-width: 2.8;
+	    stroke-linecap: round;
+	    animation: progress 1s ease-out forwards;
+	    stroke: #7BB7FF;
+	}
 
-    .percentage2 {
-        fill: #666;
-        font-family: sans-serif;
-        font-size: 0.5em;
-        text-anchor: middle;
-    }
+	@keyframes progress {
+	    0% {
+	        stroke-dasharray: 0 100;
+	    }
+	}
 
+	.percentage,
+	.percentage1,
+	.percentage2 {
+	    fill: white;
+	    font-family: sans-serif;
+	    font-size: 0.5em;
+	    text-anchor: middle;
+	}
 
+	.container {
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: center;
+	}
 
-    .flex-wrapper1 {
-        display: flex;
-        flex-flow: row nowrap;
-    }
+	.divButton {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    margin-top: 7%;
+	}
 
-    .single-chart1 {
-        width: 33%;
-        justify-content: space-around;
-    }
+	.divButton button {
+	    width: 15vw;
+	    height: 5vw;
+	    margin: 1%;
+	    font-size: 2vw;
+	    align-items: center;
+	    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+	    border: 0;
+	    border-radius: 6px;
+	    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+	    color: #fff;
+	    cursor: pointer;
+	    font-family: "JetBrains Mono", monospace;
+	    justify-content: center;
+	    will-change: box-shadow, transform;
+	}
 
-    .circular-chart1 {
-        display: block;
-        margin: 10px auto;
-        max-width: 80%;
-        max-height: 250px;
-    }
+	.divButton button:focus {
+	    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+	}
 
-    .circle-bg1 {
-        fill: none;
-        stroke: #eee;
-        stroke-width: 3.8;
-    }
+	.divButton button:hover {
+	    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+	    transform: translateY(-2px);
+	}
 
-    .circle1 {
-        fill: none;
-        stroke-width: 2.8;
-        stroke-linecap: round;
-        animation: progress 1s ease-out forwards;
-    }
+	.divButton button:active {
+	    box-shadow: #3c4fe0 0 3px 7px inset;
+	    transform: translateY(2px);
+	}
 
-    @keyframes progress {
-        0% {
-            stroke-dasharray: 0 100;
-        }
-    }
-
-    .circular-chart.orange1 .circle1 {
-        stroke: #00ff0d;
-    }
-
-    .percentage1 {
-        fill: #666;
-        font-family: sans-serif;
-        font-size: 0.5em;
-        text-anchor: middle;
-    }
-
-
-    .flex-wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-    }
-
-    .single-chart {
-        width: 33%;
-        justify-content: space-around;
-    }
-
-    .circular-chart {
-        display: block;
-        margin: 10px auto;
-        max-width: 80%;
-        max-height: 250px;
-    }
-
-    .circle-bg {
-        fill: none;
-        stroke: #eee;
-        stroke-width: 3.8;
-    }
-
-    .circle {
-        fill: none;
-        stroke-width: 2.8;
-        stroke-linecap: round;
-        animation: progress 1s ease-out forwards;
-    }
-
-    @keyframes progress {
-        0% {
-            stroke-dasharray: 0 100;
-        }
-    }
-
-    .circular-chart.orange .circle {
-        stroke: #ff9f00;
-    }
-
-    .percentage {
-        fill: #666;
-        font-family: sans-serif;
-        font-size: 0.5em;
-        text-anchor: middle;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
+	#output {
+	    display: none;
+	}
